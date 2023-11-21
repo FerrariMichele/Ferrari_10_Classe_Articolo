@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace Ferrari_10_Classe_Articolo
 {
-    public class ArticoloAlimentare : Articolo
+    public class ArticoloAlimentareFresco : ArticoloAlimentare
     {
-        private string _expYear;
-        public string ExpYear
+
+        public ArticoloAlimentareFresco (string prodID, string report, double unitPrice, string expYear, int daysTillExp) : base(prodID, report, unitPrice, expYear)
         {
-            get { return _expYear; }
-            set { _expYear = value; }
-        }
-        public ArticoloAlimentare (string prodID, string report, double unitPrice, string expYear) : base(prodID, report, unitPrice)
-        {
-            ExpYear = expYear;
+            daysTillExp = 
         }
         public override double Sconta(bool isMember)
         {
