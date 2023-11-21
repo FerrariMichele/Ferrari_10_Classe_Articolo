@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Panel panelSide;
-            this.panelMain = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonSpesa = new System.Windows.Forms.Button();
             this.buttonExit = new System.Windows.Forms.Button();
+            this.buttonSpesa = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelMain = new System.Windows.Forms.Panel();
             panelSide = new System.Windows.Forms.Panel();
             panelSide.SuspendLayout();
             this.SuspendLayout();
@@ -51,40 +51,19 @@
             panelSide.Size = new System.Drawing.Size(200, 450);
             panelSide.TabIndex = 0;
             // 
-            // panelMain
+            // buttonExit
             // 
-            this.panelMain.BackColor = System.Drawing.Color.LightPink;
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(200, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(600, 450);
-            this.panelMain.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 50);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Articoli";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAdd.FlatAppearance.BorderSize = 0;
-            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAdd.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonAdd.Location = new System.Drawing.Point(0, 50);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(200, 59);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Aggiungi";
-            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonExit.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonExit.Location = new System.Drawing.Point(0, 391);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(200, 59);
+            this.buttonExit.TabIndex = 3;
+            this.buttonExit.Text = "Uscita";
+            this.buttonExit.UseVisualStyleBackColor = true;
             // 
             // buttonSpesa
             // 
@@ -99,20 +78,43 @@
             this.buttonSpesa.TabIndex = 2;
             this.buttonSpesa.Text = "Spesa";
             this.buttonSpesa.UseVisualStyleBackColor = true;
+            this.buttonSpesa.Click += new System.EventHandler(this.buttonSpesa_Click);
             // 
-            // buttonExit
+            // buttonAdd
             // 
-            this.buttonExit.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonExit.Location = new System.Drawing.Point(0, 391);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(200, 59);
-            this.buttonExit.TabIndex = 3;
-            this.buttonExit.Text = "Uscita";
-            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAdd.FlatAppearance.BorderSize = 0;
+            this.buttonAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAdd.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonAdd.Location = new System.Drawing.Point(0, 50);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(200, 59);
+            this.buttonAdd.TabIndex = 1;
+            this.buttonAdd.Text = "Aggiungi";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 50);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Articoli";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelMain
+            // 
+            this.panelMain.BackColor = System.Drawing.Color.LightPink;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(200, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(600, 450);
+            this.panelMain.TabIndex = 1;
             // 
             // Form1
             // 
