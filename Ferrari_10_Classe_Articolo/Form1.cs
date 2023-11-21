@@ -15,6 +15,7 @@ namespace Ferrari_10_Classe_Articolo
         public Form1()
         {
             InitializeComponent();
+
         }
     }
 }
