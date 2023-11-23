@@ -58,7 +58,7 @@ namespace Ferrari_10_Classe_Articolo
         private void buttonSpesa_Click(object sender, EventArgs e)
         {
             CloseForms();
-            OpenForm<Spesa>();
+            //OpenForm<Spesa>();
         }
     }
 }
